@@ -9,7 +9,7 @@ Create a contract of rest api read_ocr.
 The solution will be evaluated by running the manifest file on minikube. 
 
 Note:
-Please fork this repo and create a pull request for submitting your solution. 
+Please download this repo and email a zip file over email. 
 
 Extra marks will be given for : 
 - setting up CI/CD files for the same app. 
