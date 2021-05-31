@@ -1,6 +1,6 @@
 # tess
 
-Given : An application with an api which extracts text from images. 
+Given : You are given an application with APIs which extracts text from images. 
 
 Task : You have to build a lightweight docker container which will map port 4000 of your app to your machine. 
 You also have to create a kubernetes manifest file which can deploy replica sets in a cluster. 
