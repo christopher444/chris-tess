@@ -15,6 +15,8 @@ Extra marks will be given for :
 - setting up CI/CD files for the same app. 
 - adding logging functionality in repo.
 
-Dependencies : 
+Dependencies :
+
 opencv-python==4.4.0.46
+
 pytesseract==0.3.7
