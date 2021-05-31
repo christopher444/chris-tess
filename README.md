@@ -1,4 +1,4 @@
-# tess
+# Tesseract service
 
 Given : You are given an application with APIs which extracts text from images. 
 
