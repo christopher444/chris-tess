@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: one
+  version: '1.0'
+  summary: Read text from images
+  description: Read text from images
+  contact:
+    name: Chris
+    email: christopher444@gmail.com
+servers:
+  - url: 'http://SERVER'
+    description: read ocr
+paths:
+  /read_ocr:
+    parameters: []
+    post:
+      summary: ''
+      operationId: post-read_ocr
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+                x-examples:
+                  Example 1:
+                    text: "Inspiring A Words\n\nAccomplish\nAccomplishments\nAchieve\nAct\nAction\nActive\nAdmiration\nAdmire\nAdventure\nAlive\nAmbition\nAmbitious\nAppreciate\nAppreciation\nAttain\nAttitude\n\nWW.THEGOALCHASER.COM\n\f"
+              examples:
+                example-1:
+                  value:
+                    text: "Inspiring A Words\n\nAccomplish\nAccomplishments\nAchieve\nAct\nAction\nActive\nAdmiration\nAdmire\nAdventure\nAlive\nAmbition\nAmbitious\nAppreciate\nAppreciation\nAttain\nAttitude\n\nWW.THEGOALCHASER.COM\n\f"
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+      description: Post request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                lang:
+                  type: string
+                config:
+                  type: string
+              x-examples:
+                Example 1:
+                  image: 'https://thegoalchaser.com/wp-content/uploads/inspiring-words-that-start-with-a-735x951.png'
+                  lang: eng
+                  config: ''
+            examples:
+              example-1:
+                value:
+                  image: 'https://thegoalchaser.com/wp-content/uploads/inspiring-words-that-start-with-a-735x951.png'
+                  lang: eng
+                  config: ''
+components:
+  schemas: {}
+  securitySchemes: {}
+

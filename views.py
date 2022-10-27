@@ -5,13 +5,16 @@ import cv2
 import requests
 from urllib.parse import unquote
 from flask import request
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
 IMAGEPATH = "data"
 
 def read_ocr():
     """
     """
     content = request.json
+    logging.debug("Incoming request:"+str(content))
     image = content['image']
     lang = content['lang']
     config = content['config']

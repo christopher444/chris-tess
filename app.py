@@ -1,5 +1,6 @@
 import os, sys
-from flask import Flaskimport views
+from flask import Flask
+import views
 
 app = Flask(__name__)
 app.add_url_rule("/", view_func = views.root, methods=['GET'])
