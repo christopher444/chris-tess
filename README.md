@@ -5,7 +5,7 @@
 >  Task : You have to build a lightweight docker container which will map port 4000 of your app to your machine. 
 
 Since the application required tessaract-ocr and libg11, it was too much of a hassle using alpine as the base, but needs 
-more expertimentation so that the size of image becomes even smaller 
+more experimentation so that the size of image becomes even smaller 
 
 > You also have to create a kubernetes manifest file which can deploy replica sets in a cluster.
 
@@ -13,6 +13,7 @@ The manifest file is present as manifest.yaml
 and the following command will install and make it work once minikube is installed with docker as the driver
 
 sudo kubectl apply -f manifest.yaml
+
 sudo kubectl port-forward --address 0.0.0.0 svc/chris-tess-svc 80:4000
 
 I used aws ec2  intance so was able to get the public ip easily
